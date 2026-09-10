@@ -1,20 +1,20 @@
-\# Métodos de Multhopp y Vortex Lattice — Ala de envergadura finita
+# Métodos de Multhopp y Vortex Lattice — Ala de envergadura finita
 
 
 
-Implementación en \*\*MATLAB\*\* de los métodos de \*\*Multhopp\*\* y \*\*Vortex Lattice (VLM)\*\* para el análisis aerodinámico de un ala de envergadura finita.
+Implementación en **MATLAB** de los métodos de **Multhopp** y **Vortex Lattice (VLM)** para el análisis aerodinámico de un ala de envergadura finita.
 
 
 
-El proyecto calcula la \*\*distribución de circulación adimensional\*\* a lo largo de la envergadura mediante dos métodos numéricos diferentes: el método de Multhopp, basado en la \*\*teoría de la línea sustentadora de Prandtl\*\*, y el método Vortex Lattice, basado en la discretización de la superficie alar mediante una malla de \*\*herraduras de torbellinos\*\*.
+El proyecto calcula la **distribución de circulación adimensional** a lo largo de la envergadura mediante dos métodos numéricos diferentes: el método de Multhopp, basado en la **teoría de la línea sustentadora de Prandtl**, y el método Vortex Lattice, basado en la discretización de la superficie alar mediante una malla de **herraduras de torbellinos**.
 
 
 
-Los resultados obtenidos mediante ambos métodos se comparan para analizar su concordancia y estudiar la influencia de la \*\*geometría en planta\*\*, el \*\*estrechamiento\*\* y la \*\*torsión geométrica\*\* sobre la distribución de cargas aerodinámicas.
+Los resultados obtenidos mediante ambos métodos se comparan para analizar su concordancia y estudiar la influencia de la **geometría en planta**, el **estrechamiento** y la **torsión geométrica** sobre la distribución de cargas aerodinámicas.
 
 
 
-\## Metodología
+## Metodología
 
 
 
@@ -22,85 +22,85 @@ El análisis se estructura en cuatro etapas:
 
 
 
-\### 1. Definición de la geometría del ala
+### 1. Definición de la geometría del ala
 
 
 
-\- Definición de un ala simétrica de planta bitrapezoidal.
+- Definición de un ala simétrica de planta bitrapezoidal.
 
-\- Envergadura total de 20 m.
+- Envergadura total de 20 m.
 
-\- Variación lineal de la cuerda en dos tramos.
+- Variación lineal de la cuerda en dos tramos.
 
-\- Incorporación de estrechamiento mediante los parámetros `τ₁` y `τ₂`.
+- Incorporación de estrechamiento mediante los parámetros `τ₁` y `τ₂`.
 
-\- Definición de una torsión geométrica variable a lo largo de la envergadura.
+- Definición de una torsión geométrica variable a lo largo de la envergadura.
 
-\- Cálculo del ángulo de ataque efectivo de cada sección.
-
-
-
-\### 2. Método de Multhopp
+- Cálculo del ángulo de ataque efectivo de cada sección.
 
 
 
-\- Formulación de la ecuación de Prandtl mediante una serie de senos.
-
-\- Discretización de la envergadura mediante coordenadas angulares.
-
-\- Construcción del sistema matricial de Multhopp.
-
-\- Resolución numérica de los coeficientes de la serie.
-
-\- Obtención de la distribución de circulación adimensional `G(y)`.
-
-\- Análisis de la convergencia de la solución.
+### 2. Método de Multhopp
 
 
 
-\### 3. Método Vortex Lattice
+- Formulación de la ecuación de Prandtl mediante una serie de senos.
+
+- Discretización de la envergadura mediante coordenadas angulares.
+
+- Construcción del sistema matricial de Multhopp.
+
+- Resolución numérica de los coeficientes de la serie.
+
+- Obtención de la distribución de circulación adimensional `G(y)`.
+
+- Análisis de la convergencia de la solución.
 
 
 
-\- Discretización de la superficie del ala mediante una malla de paneles.
-
-\- Representación de cada panel mediante una herradura de torbellino.
-
-\- Colocación del segmento ligado al 25 % de la cuerda del panel.
-
-\- Colocación del punto de control al 75 % de la cuerda.
-
-\- Cálculo de las velocidades inducidas mediante la ley de Biot–Savart.
-
-\- Construcción de la matriz de influencia.
-
-\- Imposición de la condición de tangencia.
-
-\- Resolución de las intensidades de las herraduras.
-
-\- Obtención de la circulación total de cada sección.
+### 3. Método Vortex Lattice
 
 
 
-\### 4. Comparación y cálculo aerodinámico
+- Discretización de la superficie del ala mediante una malla de paneles.
+
+- Representación de cada panel mediante una herradura de torbellino.
+
+- Colocación del segmento ligado al 25 % de la cuerda del panel.
+
+- Colocación del punto de control al 75 % de la cuerda.
+
+- Cálculo de las velocidades inducidas mediante la ley de Biot–Savart.
+
+- Construcción de la matriz de influencia.
+
+- Imposición de la condición de tangencia.
+
+- Resolución de las intensidades de las herraduras.
+
+- Obtención de la circulación total de cada sección.
 
 
 
-\- Comparación de las distribuciones de circulación obtenidas mediante Multhopp y VLM.
-
-\- Análisis de las diferencias numéricas entre ambos métodos.
-
-\- Cálculo del coeficiente de sustentación local `CL(y)`.
-
-\- Estudio de la influencia del estrechamiento y la torsión sobre la distribución de carga.
+### 4. Comparación y cálculo aerodinámico
 
 
 
-\## Resultados
+- Comparación de las distribuciones de circulación obtenidas mediante Multhopp y VLM.
+
+- Análisis de las diferencias numéricas entre ambos métodos.
+
+- Cálculo del coeficiente de sustentación local `CL(y)`.
+
+- Estudio de la influencia del estrechamiento y la torsión sobre la distribución de carga.
 
 
 
-\### Distribución de circulación — Multhopp
+## Resultados
+
+
+
+### Distribución de circulación — Multhopp
 
 
 
@@ -112,11 +112,11 @@ Debido a la torsión geométrica positiva del ala, la circulación no alcanza su
 
 
 
-!\[Distribución de circulación mediante Multhopp](resultados/circulacion\_multhopp.png)
+![Distribución de circulación mediante Multhopp](resultados/circulacion_multhopp.png)
 
 
 
-\### Distribución de circulación — Vortex Lattice
+### Distribución de circulación — Vortex Lattice
 
 
 
@@ -128,11 +128,11 @@ La solución presenta igualmente dos máximos simétricos próximos a `y = ±7 m
 
 
 
-!\[Distribución de circulación mediante Vortex Lattice](resultados/circulacion\_vlm.png)
+![Distribución de circulación mediante Vortex Lattice](resultados/circulacion_vlm.png)
 
 
 
-\### Comparación Multhopp — Vortex Lattice
+### Comparación Multhopp — Vortex Lattice
 
 
 
@@ -148,11 +148,11 @@ Las pequeñas diferencias observadas se deben principalmente a la naturaleza de 
 
 
 
-!\[Comparación de la distribución de circulación](resultados/comparacion\_circulacion.png)
+![Comparación de la distribución de circulación](resultados/comparacion_circulacion.png)
 
 
 
-\### Coeficiente de sustentación local
+### Coeficiente de sustentación local
 
 
 
@@ -168,11 +168,11 @@ Los valores máximos aparecen en las regiones exteriores del ala debido al efect
 
 
 
-!\[Coeficiente de sustentación local](resultados/coeficiente\_sustentacion\_local.png)
+![Coeficiente de sustentación local](resultados/coeficiente_sustentacion_local.png)
 
 
 
-\## Ejecución
+## Ejecución
 
 
 
@@ -180,7 +180,7 @@ El análisis completo se encuentra implementado en:
 
 
 
-`src/multhopp\_vortex\_lattice.m`
+`src/multhopp_vortex_lattice.m`
 
 
 
@@ -188,29 +188,29 @@ El script puede ejecutarse directamente desde MATLAB y realiza de forma secuenci
 
 
 
-1\. Definición de los parámetros geométricos del ala.
+1. Definición de los parámetros geométricos del ala.
 
-2\. Construcción de la distribución de cuerda y torsión.
+2. Construcción de la distribución de cuerda y torsión.
 
-3\. Resolución del método de Multhopp.
+3. Resolución del método de Multhopp.
 
-4\. Generación de la malla Vortex Lattice.
+4. Generación de la malla Vortex Lattice.
 
-5\. Construcción de la matriz de influencia mediante Biot–Savart.
+5. Construcción de la matriz de influencia mediante Biot–Savart.
 
-6\. Resolución de las intensidades de las herraduras.
+6. Resolución de las intensidades de las herraduras.
 
-7\. Obtención de las distribuciones de circulación.
+7. Obtención de las distribuciones de circulación.
 
-8\. Cálculo del coeficiente de sustentación local.
+8. Cálculo del coeficiente de sustentación local.
 
-9\. Comparación de ambos métodos.
+9. Comparación de ambos métodos.
 
-10\. Generación de las gráficas de resultados.
+10. Generación de las gráficas de resultados.
 
 
 
-\## Documentación
+## Documentación
 
 
 
@@ -218,11 +218,11 @@ La memoria técnica completa del proyecto, incluyendo el desarrollo teórico de 
 
 
 
-📄 \[Memoria técnica — Métodos de Multhopp y Vortex Lattice](docs/Memoria\_Tecnica\_Multhopp\_VLM.pdf)
+📄 [Memoria técnica — Métodos de Multhopp y Vortex Lattice](docs/Memoria_Tecnica_Multhopp_VLM.pdf)
 
 
 
-\## Estructura del repositorio
+## Estructura del repositorio
 
 
 
@@ -234,25 +234,25 @@ Multhopp-Vortex-Lattice-Method/
 
 ├── src/
 
-│   └── multhopp\_vortex\_lattice.m
+│   └── multhopp_vortex_lattice.m
 
 │
 
 ├── resultados/
 
-│   ├── circulacion\_multhopp.png
+│   ├── circulacion_multhopp.png
 
-│   ├── circulacion\_vlm.png
+│   ├── circulacion_vlm.png
 
-│   ├── comparacion\_circulacion.png
+│   ├── comparacion_circulacion.png
 
-│   └── coeficiente\_sustentacion\_local.png
+│   └── coeficiente_sustentacion_local.png
 
 │
 
 ├── docs/
 
-│   └── Memoria\_Tecnica\_Multhopp\_VLM.pdf
+│   └── Memoria_Tecnica_Multhopp_VLM.pdf
 
 │
 
@@ -264,15 +264,15 @@ Multhopp-Vortex-Lattice-Method/
 
 
 
-\## Tecnologías y métodos
+## Tecnologías y métodos
 
 
 
-\*\*MATLAB\*\* · \*\*Multhopp Method\*\* · \*\*Vortex Lattice Method\*\* · \*\*Lifting-Line Theory\*\* · \*\*Biot–Savart\*\* · Métodos numéricos · Aerodinámica de alas finitas
+**MATLAB** · **Multhopp Method** · **Vortex Lattice Method** · **Lifting-Line Theory** · **Biot–Savart** · Métodos numéricos · Aerodinámica de alas finitas
 
 
 
-\## Autoría
+## Autoría
 
 
 
@@ -280,5 +280,5 @@ Proyecto académico desarrollado en equipo en el Grado en Ingeniería Aeroespaci
 
 
 
-\*\*Sandra Castresana Sánchez\*\*
+**Sandra Castresana Sánchez**
 
