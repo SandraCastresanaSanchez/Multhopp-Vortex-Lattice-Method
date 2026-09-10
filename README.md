@@ -228,36 +228,22 @@ La memoria técnica completa del proyecto, incluyendo el desarrollo teórico de 
 
 ```text
 
+
 Multhopp-Vortex-Lattice-Method/
-
 │
-
 ├── src/
-
 │   └── multhopp_vortex_lattice.m
-
 │
-
 ├── resultados/
-
 │   ├── circulacion_multhopp.png
-
 │   ├── circulacion_vlm.png
-
 │   ├── comparacion_circulacion.png
-
 │   └── coeficiente_sustentacion_local.png
-
 │
-
 ├── docs/
-
 │   └── Memoria_Tecnica_Multhopp_VLM.pdf
-
 │
-
 ├── .gitignore
-
 └── README.md
 
 ```
