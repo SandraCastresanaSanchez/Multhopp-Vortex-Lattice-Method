@@ -227,8 +227,6 @@ La memoria técnica completa del proyecto, incluyendo el desarrollo teórico de 
 
 
 ```text
-
-
 Multhopp-Vortex-Lattice-Method/
 │
 ├── src/
